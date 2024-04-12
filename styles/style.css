@@ -399,6 +399,10 @@ p {
   gap: 10px;
 }
 
+.input-label {
+  display: none;
+}
+
 .search-input {
   padding: 12px 20px;
   width: 30vw;
@@ -551,7 +555,7 @@ aside {
   border-color: #007f73;
   border-radius: 24px;
   width: 40vw;
-  height: 40px;
+
   padding: 1em;
   margin: 1em;
 }
@@ -562,7 +566,7 @@ aside {
   border-radius: 24px;
   border-color: #007f73;
   justify-content: space-between;
-  height: 60px;
+
   padding: 10px;
   width: 40vw;
   margin: 1em;
@@ -592,7 +596,7 @@ form_label {
   border-radius: 24px;
   border-color: #007f73;
   width: 20vw;
-  height: 45px;
+
   padding: 1em;
   margin: 1em;
 }
@@ -603,7 +607,6 @@ form_label {
 }
 #other_skills {
   width: 40vw;
-  height: 50px;
   border-radius: 24px;
   border-color: #007f73;
   padding: 1em;
@@ -650,6 +653,7 @@ form_label {
 
 .group-info-container {
   margin-left: 20px;
+  margin-right: 20px;
   margin-bottom: 20px;
   overflow: auto;
   float: left;
@@ -694,7 +698,7 @@ figcaption {
 }
 
 .small-text {
-  font-size: 0.8rem;
+  display: none;
 }
 
 .figure-container {
@@ -702,27 +706,47 @@ figcaption {
 }
 
 .popup {
-  position: absolute;
-  background-color: white;
-  padding: 15px;
-  border-radius: 16px;
-  top: 10px;
-  left: 25px;
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  display: none;
   text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-area:hover + .popup {
-  display: block;
+@media (hover) {
+  .popup {
+    position: absolute;
+    background-color: white;
+    padding: 15px;
+    border-radius: 16px;
+    top: 10px;
+    left: 25px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    display: none;
+    text-align: center;
+  }
+
+  area:hover + .popup {
+    display: block;
+  }
+
+  .small-text {
+    display: block;
+    font-size: 0.8rem;
+  }
 }
 
 .timetable-container {
   clear: both;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  margin: 20px;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+table caption {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px;
+  text-align: left;
 }
 
 table {
@@ -985,6 +1009,14 @@ code {
     flex-direction: column;
   }
 
+  .why_choose_us_container {
+    flex-direction: column;
+  }
+
+  #why_choose_us_side_image {
+    width: 100%;
+  }
+
   /* -----Apply Page----- */
   .container_form {
     width: 100%;
@@ -1007,6 +1039,11 @@ code {
 
 @media (max-width: 480px) {
   /* -----Home Page----- */
+  menu {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   .home_button_class {
     display: flex;
     flex-direction: column;
@@ -1029,5 +1066,47 @@ code {
 
   .our_purpose_p {
     font-size: 0.8em;
+  }
+
+  #email_newsletter {
+    width: 200px;
+  }
+
+  .newsletter_home p {
+    width: 300px;
+  }
+
+  /* -----Jobs Page----- */
+  .jobs-page-title {
+    font-size: 1.8em;
+  }
+
+  .jobs-page-description {
+    font-size: 0.8em;
+  }
+  .search-input {
+    width: 200px;
+  }
+
+  /* -----Apply Page----- */
+  .gender,
+  #skill_lists {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* -----About Page----- */
+  .group-info-container {
+    width: 90vw;
+  }
+
+  dl {
+    width: 100%;
+  }
+
+  /* -----Enhancement Page----- */
+  .enhancement-container {
+    width: 90vw;
+    padding-left: 10px;
   }
 }
