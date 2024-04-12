@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <title>Job Application Form</title>
+    <link rel="icon" type="image/x-icon" href="/images/logo.png">
+    <link rel="stylesheet" href="styles/style.css">
+    
+  </head>
+  <body>
+    <header>
+      <div class="header-left">
+        <a href="index.html">
+          <img class="logo" src="images/logo.png" alt="The Catalyst Logo" />
+          <div class="logo-typography">The Catalyst Lab</div>
+        </a>
+      </div>
+      <div class="header-center">
+        <nav>
+          <menu>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="jobs.html">JOBS</a></li>
+            <li class="nav-active"><a href="apply.html">APPLY</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="enhancements.html">ENHANCEMENT</a></li>
+          </menu>
+        </nav>
+      </div>
+      <div class="header-right">
+        <button class="btn-sharp btn-fill">GET STARTED</button>
+      </div>
+    </header>
+    <main>
+      <section class="application_page">
+        <div class="container_form">
+           
+                <h1 id="application_title">
+                     Job Application Form
+                </h1>
+                <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post" class="apply_form">
+                    <div class="form_container">
+                      <div class="job_reference_class">
+                         <p class="form_label"><label for="job_reference_number">Job Reference Number</label></p>
+                         <div class="input-container">
+                          <input
+                                id="job_reference_number"
+                                name="job_reference_number"
+                                placeholder="Enter Job Reference Number..."
+                                required
+                                maxlength="20"
+                                pattern="[A-Za-z0-9]{5}"
+                                title="Please enter exactly 5 alphanumeric characters." 
+                                autocomplete="off"
+                                >
+                                <span></span>
+                         </div>
+                            
+                              
+                      </div>
+                      <div class="first_name_class">
+                                <p class="form_label"><label for="first_name">First Name</label></p>
+                                <input
+                                id="first_name"
+                                name="first_name"
+                                placeholder="Enter Fisrt Name..."
+                                required
+                                maxlength="20"
+                                pattern="[A-Za-z]{1,20}"
+                                title="Please enter up to 20 alphabetic characters." 
+                                >
+                      </div>
+                      <div class="last_name_class">
+                          <p class="form_label"><label for="last_name">Last Name</label></p>
+                          <input
+                                id="last_name"
+                                name="last_name"
+                                placeholder="Enter Last Name..."
+                                required
+                                maxlength="20"
+                                pattern="[A-Za-z]{1,20}"
+                                title="Please enter up to 20 alphabetic characters." 
+                                >
+                      </div>
+                      <div class="date_of_birth_class">
+                            <p class="form_label"><label for="date_of_birth">Date Of Birth</label></p>
+                            <input id="date_of_birth"
+                            value="dd/mm/yyyy" type="date"
+                            >
+                      </div>
+                        <fieldset class="gender">
+                            <legend>Gender</legend>
+                            <div class="form_control">
+                                <label><input type="radio" name="gender" value="male"> Male</label>
+                            </div>
+                            <div class="form_control">
+                                <label><input type="radio" name="gender" value="female"> Female</label>
+                            </div>
+                            <div class="form_control">
+                                <label><input type="radio" name="gender" value="non_binary"> Non-Binary</label>
+                            </div>
+                            <div class="form_control">
+                              <label><input type="radio" name="gender" value="transgender"> Transgender</label>
+                          </div>
+                          <div class="form_control">
+                            <label><input type="radio" name="gender" value="prefer_not_to_say"> Prefer Not To Say</label>
+                        </div>
+                        </fieldset>
+                        <div class="street_suburb">
+                          <div>
+                              <p class="form_label"><label for="street_address">Street Address</label></p>
+                                  <input
+                                      id="street_address"
+                                      name="street_address"
+                                      placeholder="Enter Street Address..."
+                                      required
+                                      maxlength="40">
+                          </div>
+                          <div>
+                              <p class="form_label">
+                                  <label for="suburb_town">Suburb/Town</label></p>
+                                  <input
+                                      id="suburb_town"
+                                      name="suburb_town"
+                                      placeholder="Enter Suburb/Town..."
+                                      required
+                                      maxlength="40">
+                          </div>
+                        </div>
+                        <div class="state_postcode">
+                          <div>
+                          <p class="form_label">
+                            <label for="state">State</label></p>
+                            <select id="state" name="state" required>
+                                <option value="">Select State</option>
+                                <option value="VIC">VIC</option>
+                                <option value="NSW">NSW</option>
+                                <option value="QLD">QLD</option>
+                                <option value="NT">NT</option>
+                                <option value="WA">WA</option>
+                                <option value="SA">SA</option>
+                                <option value="TAS">TAS</option>
+                                <option value="ACT">ACT</option>
+                            </select>
+                          </div>
+                            <div>
+                            <p class="form_label">
+                            <label for="postcode">Postcode</label></p>
+                            <input
+                                id="postcode"
+                                name="postcode"
+                                placeholder="Enter Postcode..."
+                                required
+                                maxlength="4"
+                                pattern="[A-Za-z0-9]{4}"
+                                title="Please enter exactly 4 digits." 
+                                >
+                            </div>
+                        </div>
+                        <div class="email_class">
+                          <p class="form_label"><label for="email">Email Address</label></p>
+                           <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Enter Email Address..."
+                                required
+                                >
+                          </div>
+                        <div class="number_class">
+                           <p class="form_label"><label for="number">Phone Number</label></p>
+                            <input
+                                type="tel"
+                                id="number"
+                                name="number"
+                                placeholder="Enter Phone Number..."
+                                required
+                                pattern="[0-9\s]{8,12}"
+                                title="Please enter a valid phone number with 8 to 12 digits or spaces."
+                                >
+                        </div>
+                        </div>
+                        <fieldset id="skill_lists"><legend>Skill List</legend>
+                          <label for="html">HTML 
+                             <input type="checkbox" id="html" name="html" value="html" checked="checked"></label>
+                          <label for="css">Css 
+                            <input type="checkbox" id="css" name="css" value="css"></label>
+                          <label for="javacript">Javacript 
+                           <input type="checkbox" id="javacript" name="javacript" value="javacript"></label>
+                          <label for="php">PHP
+                            <input type="checkbox" id="php" name="php" value="php"></label>
+                          <label for="mysqt">MySQL
+                            <input type="checkbox" id="mysql" name="mysql" value="mysql"></label>
+                        </fieldset>
+                    <div class="textarea_control">
+                            <p class="form_label"><label for="other_skills">Other Skills</label></p>
+                            <textarea 
+                              id="other_skills"
+                              name="other_skills"
+                              placeholder="Please Enter Your Other Skills"></textarea>
+                    </div>
+                    <div class="end_form" >
+                        <button class="btn-fill btn-sharp" type="submit">Apply</button>
+                        <p id="condition_apply">By clicking Apply, you agree to our <strong>User Agreement</strong>,<strong> Privacy Policy</strong>, and <strong>Cookie Policy</strong> .</p>
+                    </div>
+                  </form>        
+                     </div>
+            
+        </div>
+      </div>
+        <div class="featured_image">
+          <img src="images/job_application_featured_image.png">
+       </div>
+      </section>
+    </main>
+    <footer class="apply_footer">
+      <p>About Us | Services | Blog | Contact Us | Terms of Service | Privacy Policy</p>
+
+<p>123 Main Street, City, State, ZIP | Phone: (123) 456-7890 | Email: <a href="mailto:info@thecatalystlab.com">info@thecatalystlab.com</a></p>
+
+<!-- [info@thecatalystlab.com](mailto:info@thecatalystlab.com) -->
+
+<p>© 2024 The Catalyst Lab. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>     

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link rel="icon" type="image/x-icon" href="/images/logo.png">
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Enhancement Page</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-left">
+        <a href="index.html">
+          <img class="logo" src="images/logo.png" alt="The Catalyst Logo" />
+          <div class="logo-typography">The Catalyst Lab</div>
+        </a>
+      </div>
+      <div class="header-center">
+        <nav>
+          <menu>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="jobs.html">JOBS</a></li>
+            <li><a href="apply.html">APPLY</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li class="nav-active">
+              <a href="enhancements.html">ENHANCEMENT</a>
+            </li>
+          </menu>
+        </nav>
+      </div>
+      <div class="header-right">
+        <button class="btn-sharp btn-fill">GET STARTED</button>
+      </div>
+    </header>
+    <main class="enhancement-page">
+      <h1>Enhanced Features</h1>
+      <p>
+        On this website, we have implemented a number of enhanced features that
+        improve its accessibility and user experience. Below are the
+        enhancements:
+      </p>
+      <div class="enhancement-container">
+        <ol class="enhancement-list">
+          <li><a href="#">Hover animation on navigation items</a></li>
+          <li>
+            <a href="about.html#enhancement2"
+              >Use of image map on team photo to present team member information when
+              hover</a
+            >
+          </li>
+          <li><a href="#">Responsive design with CSS using media queries</a></li>
+        </ol>
+      </div>
+      <div class="enhancement-description-container">
+        <section class="enhancement-description">
+          <h2>Hover animation on navigation items</h2>
+          <p class="enhancement-desc-text">
+            We implement the hover animation effect on the navigation item at
+            the top navigation bar to facilitate users experience navigating
+            between different web pages. This enhancement provides a visual clue
+            for users when they hover, as a line goes beneath the navigation
+            item, with the width of the line animates from 0% to 100%. We have
+            used more advanced CSS topics such as pseudo elements, animation in
+            order to do this effect.
+          </p>
+          <p class="align-self-start">
+            The CSS code needed for this animation is as follow:
+            <pre><code>
+              menu li {
+                list-style-type: none;
+                display: inline-block;
+              }
+              
+              menu li a {
+                position: relative;
+                padding-bottom: 20px;
+              }
+              
+              menu li a:hover {
+                color: #007f73;
+              }
+              
+              menu li a::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background-color: #007f73;
+                transition: width 0.2s ease-in-out;
+              }
+              
+              menu li a:hover::after {
+                width: 100%;
+              }
+                </code></pre>
+          </p>
+        </section>
+        <section class="enhancement-description">
+          <h2>Use of image map on team photo to present team member information when
+            hover</h2>
+          <p class="enhancement-desc-text">
+            We implement the image map feature, which can help displaying team member information such as name, hometown, degree,... in a meaningful way. Image map is an image with a clickable area, but since in this assignment we cannot use Javascript for additional web interaction, we decide to go with the hover effect, which also work well. When user hover the person area, a text box will appear to provide additional information about the team member. To do this enhancement feature, we implement the HTML map element, along with additional styling for the text, using more advanced CSS selectors and techniques, such as the use of the adjacent sibling combinator (+).
+          </p>
+          <p class="align-self-start">
+            The CSS code needed for this enhancement is as follow:
+            <pre><code>
+              .figure-container {
+                position: relative;
+              }
+              
+              .popup {
+                position: absolute;
+                background-color: white;
+                padding: 15px;
+                border-radius: 16px;
+                top: 10px;
+                left: 25px;
+                border: 1px solid #ccc;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+                display: none;
+                text-align: center;
+              }
+              
+              area:hover + .popup {
+                display: block;
+              }
+            </code></pre>
+          </p>
+        </section>
+        <section class="enhancement-description">
+          <h2>Responsive design with CSS using media queries</h2>
+          <p class="enhancement-desc-text">
+            We implement responsive design so that web pages look good on different screen sizes. To implement this, we use CSS media queries, setting up multiple breakpoints, such as 1200px, 1024px, 768px and 480px. These breakpoints and the CSS modifications are created to ensure that users can have the best experience reading the web content on any devices, whether it is mobile, tablet or desktop.
+          </p>
+          <p class="align-self-start">
+            Some of the CSS code used for this enhancement are as follow:
+            <pre><code>
+              @media (max-width: 1024px) {
+                /* -----Home Page----- */
+                #hero_side_image {
+                  width: 80%;
+                  max-width: 450px;
+                  height: auto;
+                }
+                .creation_home {
+                  flex-direction: column;
+                  gap: 50px;
+                }
+              
+                .creation-card {
+                  min-width: 200px;
+                  flex-shrink: 1;
+                }
+              }
+              @media (max-width: 768px) {
+                /* -----Home Page----- */
+                .card_creations {
+                  flex-direction: column;
+                }
+              
+                /* -----Apply Page----- */
+                .container_form {
+                  width: 100%;
+                }
+              
+                .apply_form {
+                  width: 100%;
+                }
+              }
+              
+              @media (max-width: 480px) {
+                /*Home Page*/
+                .home_button_class {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  gap: 10px;
+                }
+              
+                .home_button_class button {
+                  width: 200px;
+                  font-size: 0.8em;
+                }
+              
+                .home_title_page {
+                  font-size: 1.4em;
+                }
+              
+                #hero_desc {
+                  font-size: 0.8em;
+                }
+              
+                .our_purpose_p {
+                  font-size: 0.8em;
+                }
+              }
+                </code></pre>
+          </p>
+        </section>
+      </div>
+    </main>
+    <footer class="apply_footer">
+      <p class="footer">
+        About Us | Services | Blog | Contact Us | Terms of Service | Privacy
+        Policy
+      </p>
+      <p class="footer">
+        123 Main Street, City, State, ZIP | Phone: (123) 456-7890 | Email:
+        info@thecatalystlab.com
+      </p>
+
+      <p class="footer">© 2024 The Catalyst Lab. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

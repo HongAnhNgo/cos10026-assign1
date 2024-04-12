@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link rel="icon" type="image/x-icon" href="/images/logo.png">
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Jobs Page</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-left">
+        <a href="index.html">
+          <img class="logo" src="images/logo.png" alt="The Catalyst Logo" />
+          <div class="logo-typography">The Catalyst Lab</div>
+        </a>
+      </div>
+      <div class="header-center">
+        <nav>
+          <menu>
+            <li><a href="index.html">HOME</a></li>
+            <li class="nav-active"><a href="jobs.html">JOBS</a></li>
+            <li><a href="apply.html">APPLY</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="enhancements.html">ENHANCEMENT</a></li>
+          </menu>
+        </nav>
+      </div>
+      <div class="header-right">
+        <button class="btn-sharp btn-fill">GET STARTED</button>
+      </div>
+    </header>
+    <main>
+      <h1 class="jobs-page-title">Jobs at The Catalyst Lab</h1>
+      <p class="jobs-page-description">
+        We’re looking forward to welcoming you on board!
+      </p>
+      <div class="search-box">
+        <input
+          type="text"
+          class="search-input"
+          placeholder="Job title, keyword"
+        />
+        <button class="btn-sharp btn-fill">Search</button>
+      </div>
+      <aside class="filter-section">
+        <h2>Filter</h2>
+        <div class="filter-experience-level">
+          <h3>Experience Level</h3> 
+          <div class="experience-level-checkbox-list">
+            <div>
+              <input type="checkbox" id="internship" name="internship" checked />
+            <label for="internship">Internship</label>
+            </div>
+            <div>
+              <input type="checkbox" id="entry" name="entry level" />
+            <label for="entry">Entry Level</label>
+            </div>
+            <div>
+              <input type="checkbox" id="junior" name="junior" />
+            <label for="junior">Junior</label>
+            </div>
+            <div>
+              <input type="checkbox" id="senior" name="senior" />
+            <label for="senior">Senior</label>
+            </div>
+            <div>
+              <input type="checkbox" id="director" name="director" />
+            <label for="director">Director</label>
+            </div>
+            <div>
+              <input type="checkbox" id="executive" name="executive" />
+            <label for="executive">Executive</label>
+            </div>
+          </div>
+            
+        </div>
+        <div class="filter-salary-range"> 
+          <h3>Salary Range</h3>
+          <p class="slider-container">
+            <input type="range" min="45000" max="450000" value="250000" class="slider" id="salaryRange">
+          </p>
+          
+        </div>
+        <div class="filter-work-place">
+          <h3>Work Place</h3>
+          <div class="work-place-checkbox-list">
+            <div>
+              <input type="checkbox" id="on-site" name="on-site" />
+            <label for="on-site">On-site</label>
+            </div>
+            <div>
+              <input type="checkbox" id="hybrid" name="hybrid" />
+            <label for="hybrid">Hybrid</label>
+            </div>
+            <div>
+              <input type="checkbox" id="remote" name="remote" />
+            <label for="remote">Remote</label>
+            </div>
+          </div>
+          
+        </div>
+
+        <div class="button-container">
+          <button class="btn-sharp btn-fill filter-btn">Apply Filter</button>
+        </div>
+        
+      </aside>
+      <section class="job fed">
+        <div class="job-top">
+          <h2 class="job-title">Frontend Developer</h2>
+          <button class="tag">FED01</button>
+        </div>
+        <p class="work-place">
+          <span class="material-symbols-outlined"> work </span>
+          <button class="tag">Hybrid</button>
+          <button class="tag">On-site</button>
+        </p>
+        <p class="skills">
+          <span class="bold-text">Skills:</span>
+
+          <span class="skills-list"
+            >HTML, CSS, Javascript, React JS, +2 more</span
+          >
+        </p>
+        <p class="experience-level">
+          <span class="bold-text">Experience Level</span>
+          <button class="tag">Junior</button>
+        </p>
+        <p class="salary-range">
+          <span class="bold-text">Salary Range:</span>
+          <button class="tag">$60,000</button>
+          <span class="dash"> - </span>
+          <button class="tag">$180,000</button>
+        </p>
+        <p class="button-group">
+          <button class="btn-sharp btn-fill">Apply Now</button>
+          <button class="btn-sharp btn-outline">Save</button>
+        </p>
+        <div class="job-description">
+          <h3>Job Description</h3>
+          <p>Position reference number: FED01</p>
+          <p>Position title: Frontend Developer</p>
+          <p>
+            Brief description: The Frontend Developer will be responsible for
+            designing and implementing user-facing features on web applications.
+            They will work closely with the design and backend development teams
+            to create seamless and intuitive user experiences.
+          </p>
+          <p>Salary Range: $60,000 - $180,000 per year</p>
+          <p>Reporting Manager: Lead Developer</p>
+          <p>Key Responsibilities: 
+            <ol class="responsibilities-list">
+              <li>Develop user-facing features using HTML, CSS, and JavaScript.</li>
+              <li>Collaborate with design teams to translate design wireframes into functional web interfaces</li>
+              <li>Optimize applications for maximum speed and scalability.</li>
+              <li>Implement responsive design principles to ensure cross-platform compatibility.</li>
+              <li>Conduct code reviews and provide constructive feedback to other team members.</li>
+            </ol>
+          </p>
+          <div>
+            <p>Requirements:</p>
+            <ul class="requirements-group">
+              <li>Essential:
+                <ul class="requirements-list">
+                  <li>Proficiency in HTML, CSS, and JavaScript.</li>
+                  <li>Experience with frontend frameworks/libraries (e.g., React, Angular, Vue.js).</li>
+                  <li>Strong understanding of responsive design principles.</li>
+                </ul>
+              </li>
+              <li>Preferable:
+                <ul class="requirements-list">
+                  <li>Bachelor's degree in Computer Science or related field.</li>
+                  <li>2+ years of experience as a frontend developer.</li>
+                  <li>Knowledge of backend development technologies (e.g., PHP, Node.js).</li>
+                </ul>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </section>
+      
+      <section class="job fsd">
+        <div class="job-top">
+          <h2 class="job-title">Full Stack Developer</h2>
+          <button class="tag">FSD02</button>
+        </div>
+        <p class="work-place">
+          <span class="material-symbols-outlined"> work </span>
+          <button class="tag">On-site</button>
+        </p>
+        <p class="skills">
+          <span class="bold-text">Skills:</span>
+
+          <span class="skills-list"
+            >HTML, CSS, Javascript, PHP, +3 more</span
+          >
+        </p>
+        <p class="experience-level">
+          <span class="bold-text">Experience Level</span>
+          <button class="tag">Senior</button>
+        </p>
+        <p class="salary-range">
+          <span class="bold-text">Salary Range:</span>
+          <button class="tag">$120,000</button>
+          <span class="dash"> - </span>
+          <button class="tag">$250,000</button>
+        </p>
+        <p class="button-group">
+          <button class="btn-sharp btn-fill">Apply Now</button>
+          <button class="btn-sharp btn-outline">Save</button>
+        </p>
+        <div class="job-description">
+          <h3>Job Description</h3>
+          <p>Position reference number: FSD02</p>
+          <p>Position title: Full Stack Developer</p>
+          <p>
+            Brief description: The Full Stack Developer will be responsible for developing and maintaining both frontend and backend components of web applications. They will work closely with cross-functional teams to deliver high-quality software solutions.
+          </p>
+          <p>Salary Range: $120,000 - $250,000 per year</p>
+          <p>Reporting Manager: Lead Developer</p>
+          <p>Key Responsibilities: 
+            <ol class="responsibilities-list">
+              <li>Develop and maintain both frontend and backend components of web applications.</li>
+              <li>Collaborate with designers and frontend developers to implement user-facing features.</li>
+              <li>Design and implement RESTful APIs for seamless communication between frontend and backend systems.</li>
+              <li>Optimize applications for performance and scalability.</li>
+              <li>Conduct code reviews and ensure coding standards and best practices are followed.</li>
+            </ol>
+          </p>
+          <div>
+            <p>Requirements:</p>
+            <ul class="requirements-group">
+              <li>Essential:
+                <ul class="requirements-list">
+                  <li>Proficiency in HTML, CSS, JavaScript, and at least one backend programming language (e.g., PHP, Python, Node.js).</li>
+                  <li>Experience with frontend and backend frameworks/libraries (e.g., React, Angular, Express.js).</li>
+                  <li>Strong understanding of database design and implementation.</li>
+                </ul>
+              </li>
+              <li>Preferable:
+                <ul class="requirements-list">
+                  <li>Bachelor's degree in Computer Science or related field.</li>
+                  <li>5+ years of experience as a full stack developer.</li>
+                  <li>Knowledge of DevOps practices and tools.</li>
+                </ul>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="job-footer">
+      <p class="footer">
+        About Us | Services | Blog | Contact Us | Terms of Service | Privacy
+        Policy
+      </p>
+      <p class="footer">
+        123 Main Street, City, State, ZIP | Phone: (123) 456-7890 | Email:
+        info@thecatalystlab.com
+      </p>
+
+      <p class="footer">© 2024 The Catalyst Lab. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>
