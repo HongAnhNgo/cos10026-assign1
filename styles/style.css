@@ -738,6 +738,11 @@ table {
   color: white;
 }
 
+.timetable-tutorial {
+  background-color: #4ccd99;
+  color: white;
+}
+
 th,
 td {
   padding: 10px;
@@ -1026,4 +1031,3 @@ code {
     font-size: 0.8em;
   }
 }
-
