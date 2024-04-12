@@ -105,30 +105,47 @@
           <h2>Use of image map on team photo to present team member information when
             hover</h2>
           <p class="enhancement-desc-text">
-            We implement the image map feature, which can help displaying team member information such as name, hometown, degree,... in a meaningful way. Image map is an image with a clickable area, but since in this assignment we cannot use Javascript for additional web interaction, we decide to go with the hover effect, which also work well. When user hover the person area, a text box will appear to provide additional information about the team member. To do this enhancement feature, we implement the HTML map element, along with additional styling for the text, using more advanced CSS selectors and techniques, such as the use of the adjacent sibling combinator (+).
+            We implement the image map feature, which can help displaying team member information such as name, hometown, degree,... in a meaningful way. Image map is an image with a clickable area, but since in this assignment we cannot use Javascript for additional web interaction, we decide to go with the hover effect, which also work well. When user hover the person area, a text box will appear to provide additional information about the team member. To do this enhancement feature, we implement the HTML map element, along with additional styling for the text, using more advanced CSS selectors and techniques, such as the use of the adjacent sibling combinator (+). We also include a backup plan for touch devices, using media query to target hover-able devices. The result is that when users use touch devices like mobile or tablet, the additional team members' information will be displayed, however when users use desktop, the hover effect applies.
           </p>
           <p class="align-self-start">
             The CSS code needed for this enhancement is as follow:
             <pre><code>
+              .small-text {
+                display: none;
+              }
+              
               .figure-container {
                 position: relative;
               }
               
               .popup {
-                position: absolute;
-                background-color: white;
-                padding: 15px;
-                border-radius: 16px;
-                top: 10px;
-                left: 25px;
-                border: 1px solid #ccc;
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-                display: none;
                 text-align: center;
+                margin-top: 10px;
+                margin-bottom: 10px;
               }
               
-              area:hover + .popup {
-                display: block;
+              @media (hover) {
+                .popup {
+                  position: absolute;
+                  background-color: white;
+                  padding: 15px;
+                  border-radius: 16px;
+                  top: 10px;
+                  left: 25px;
+                  border: 1px solid #ccc;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+                  display: none;
+                  text-align: center;
+                }
+              
+                area:hover + .popup {
+                  display: block;
+                }
+              
+                .small-text {
+                  display: block;
+                  font-size: 0.8rem;
+                }
               }
             </code></pre>
           </p>
